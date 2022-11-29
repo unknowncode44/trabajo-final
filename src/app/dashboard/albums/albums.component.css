@@ -1,0 +1,27 @@
+.album-wrapper {
+    border: solid 1px var(--primary-lighter);
+    border-radius: 15px;
+    height: 650px;
+    position: relative;
+}
+
+.album-wrapper .grid-wrapper {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.card {
+    width: 19rem !important;
+}
+
+@media(max-width: 400px) {
+    .card {
+        width: 16rem !important;
+    }
+}
+
+@media(max-width: 374px) {
+    .card {
+        width: 12rem !important;
+    }
+}

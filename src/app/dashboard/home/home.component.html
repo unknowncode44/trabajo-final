@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 m-2">
+            <h3>Home</h3>
+            <div class="row">
+                <div class="col-md-12 p-4 mr-2 image-wrapper">
+                    <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+                        <ng-template ngbSlide *ngFor="let image of images">
+                            <div class="picsum-img-wrapper">
+                                <img [src]="image" alt="Random slide" />
+                            </div>
+                            <div class="carousel-caption">
+                                <h3>{{ imgObjectArray[0].caption }}</h3>
+                                <p>{{ imgObjectArray[0].subCaption }}</p>
+                            </div>
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+                <div class="col-md-12">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 m-2">
+            <h3>Ultimos Albumes</h3>
+            <div class="row table-row">
+                <div class="col-md-12  p-4 mr-2 table-wrapper ">
+                    <div class="table-box">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Avatar</th>
+                                    <th scope="col">Author</th>
+                                    <th scope="col">Fotos</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let album of imgObjectArray; index as i">
+                                    <th scope="row">{{ i + 1 }}</th>
+                                    <td>
+                                        <img [src]="album.avatar" class="me-2" style="width: 20px" />
+                                    </td>
+                                    <td>{{ album.author }}</td>
+                                    <td>{{ album.images.length }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

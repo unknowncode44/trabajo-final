@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 m-2">
+            <h3>Albums</h3>
+            <div class="album-wrapper p-4">
+                <div class="container grid-wrapper">
+                    <div class="row">
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 p-2" *ngFor="let album of albums_">
+                            <div class="card">
+                                <img src="{{ images[5] }}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{album.author}}</h5>
+                                    <p class="card-text">{{album.subCaption}}</p>
+                                    <a href="#" class="btn btn-primary">Ir al Album</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

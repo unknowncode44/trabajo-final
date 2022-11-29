@@ -1,0 +1,27 @@
+.image-wrapper {
+    border: solid 1px var(--primary-lighter);
+    border-radius: 15px;
+    height: 650px;
+}
+
+.image-wrapper ngb-carousel {
+    height: 100%;
+}
+
+.table-wrapper {
+    border: solid 1px var(--primary-lighter);
+    border-radius: 15px;
+    height: 650px !important;
+    position: relative;
+}
+
+.table-wrapper .table-box {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+@media(max-width: 991px) {
+    .image-wrapper {
+        height: 650px;
+    }
+}

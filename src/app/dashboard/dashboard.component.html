@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <div class="top-bar">
+        <h2>My Photos</h2>
+    </div>
+    <div class="sidebar">
+        <div class="logo">
+            <h2>My Photos</h2>
+            <img src="../../assets/icons/logo.svg">
+        </div>
+        <div class="menu">
+            <div class="menu-section" *ngFor="let section of sections">
+                <img src="{{ section.logo }}" alt="">
+                <p (click)="switchComponent(section.sectionCode)">{{ section.sectionName }}</p>
+            </div>
+        </div>
+
+    </div>
+    <div id="content" class="content">
+        <div class="container" *ngIf="home">
+            <app-home></app-home>
+        </div>
+        <div class="container" *ngIf="albums">
+            <app-albums></app-albums>
+        </div>
+        <div class="container" *ngIf="contact">
+            <app-contact></app-contact>
+        </div>
+        <div class="container" *ngIf="other">
+            <app-others></app-others>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <div class="menu-section" *ngFor="let section of sections">
+            <img src="{{ section.logo }}" (click)="switchComponent(section.sectionCode)">
+        </div>
+    </div>
+
+</div>
